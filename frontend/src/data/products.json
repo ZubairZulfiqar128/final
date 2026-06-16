@@ -1,0 +1,138 @@
+[
+  {
+    "id": "aur-001",
+    "name": "Nocturne Automatic",
+    "brand": "Aurum Atelier",
+    "price": 12450,
+    "category": "Dress",
+    "featured": true,
+    "shortDescription": "Slim dress watch with guilloché dial and rose gold accents.",
+    "description": "The Nocturne embodies quiet luxury: a hand-finished guilloché dial, applied indices in rose gold, and an in-house automatic calibre visible through a sapphire case back. Water resistant to 50m.",
+    "image": "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=800&q=80",
+    "specs": {
+      "case": "40mm polished steel",
+      "movement": "Automatic, 28,800 vph",
+      "crystal": "Sapphire front & back",
+      "waterResistance": "50m"
+    }
+  },
+  {
+    "id": "aur-002",
+    "name": "Marina Diver Pro",
+    "brand": "Aurum Atelier",
+    "price": 8950,
+    "category": "Diver",
+    "featured": true,
+    "shortDescription": "Ceramic bezel and 300m depth rating for serious collectors.",
+    "description": "Engineered for the abyss: ceramic unidirectional bezel, luminous markers with long-lasting Super-LumiNova, and a helium escape valve. The Marina Diver Pro is tested beyond industry standards.",
+    "image": "https://images.unsplash.com/photo-1495856458515-0637185db551?auto=format&fit=crop&w=800&q=80",
+    "specs": {
+      "case": "42mm brushed steel",
+      "movement": "Automatic chronometer",
+      "crystal": "Domed sapphire",
+      "waterResistance": "300m"
+    }
+  },
+  {
+    "id": "vel-003",
+    "name": "Stratus Pilot GMT",
+    "brand": "Velours Geneve",
+    "price": 6790,
+    "category": "Pilot",
+    "featured": true,
+    "shortDescription": "Dual-time complication with bi-directional slide rule.",
+    "description": "Inspired by vintage cockpit instruments, the Stratus GMT pairs a 24-hour hand with a refined slide rule bezel. Ideal for travelers who refuse to compromise on legibility.",
+    "image": "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=800&q=80",
+    "specs": {
+      "case": "41mm titanium",
+      "movement": "GMT automatic",
+      "crystal": "AR-coated sapphire",
+      "waterResistance": "100m"
+    }
+  },
+  {
+    "id": "vel-004",
+    "name": "Circuit Chronograph",
+    "brand": "Velours Geneve",
+    "price": 11200,
+    "category": "Chronograph",
+    "featured": false,
+    "shortDescription": "Column-wheel chronograph with vertical clutch.",
+    "description": "A motorsport soul in a tailored case. The Circuit uses a column-wheel architecture for crisp pusher feel and a vertical clutch that eliminates hand jump on start.",
+    "image": "https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?auto=format&fit=crop&w=800&q=80",
+    "specs": {
+      "case": "42mm DLC steel",
+      "movement": "Integrated chronograph",
+      "crystal": "Sapphire",
+      "waterResistance": "100m"
+    }
+  },
+  {
+    "id": "ori-005",
+    "name": "Solstice Moonphase",
+    "brand": "Origine Paris",
+    "price": 15800,
+    "category": "Dress",
+    "featured": true,
+    "shortDescription": "Aventurine sky with photorealistic moon disc.",
+    "description": "Each Solstice dial is a unique slice of deep blue aventurine glass. The moonphase advances with astronomical precision, requiring adjustment only once every 122 years.",
+    "image": "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&w=800&q=80",
+    "specs": {
+      "case": "38mm white gold",
+      "movement": "Automatic with moonphase",
+      "crystal": "Sapphire",
+      "waterResistance": "30m"
+    }
+  },
+  {
+    "id": "ori-006",
+    "name": "Granite Sport",
+    "brand": "Origine Paris",
+    "price": 5450,
+    "category": "Sport",
+    "featured": false,
+    "shortDescription": "Integrated bracelet and textured dial in slate tones.",
+    "description": "The Granite collection brings integrated-bracelet ergonomics to daily wear. Textured dial catches light like brushed stone; the bracelet tapers for wrist comfort.",
+    "image": "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=800&q=80",
+    "specs": {
+      "case": "39mm steel",
+      "movement": "Automatic",
+      "crystal": "Sapphire",
+      "waterResistance": "100m"
+    }
+  },
+  {
+    "id": "aur-007",
+    "name": "Equinox Ultra-Thin",
+    "brand": "Aurum Atelier",
+    "price": 9200,
+    "category": "Dress",
+    "featured": false,
+    "shortDescription": "7.8mm profile with micro-rotor movement.",
+    "description": "Sculpted for evening wear: an ultra-thin case houses a micro-rotor calibre that preserves a slim silhouette without sacrificing power reserve.",
+    "image": "https://images.unsplash.com/photo-1533139502658-0198f920d3e8?auto=format&fit=crop&w=800&q=80",
+    "specs": {
+      "case": "39mm steel & gold",
+      "movement": "Micro-rotor automatic",
+      "crystal": "Sapphire",
+      "waterResistance": "30m"
+    }
+  },
+  {
+    "id": "vel-008",
+    "name": "Apex Regatta Timer",
+    "brand": "Velours Geneve",
+    "price": 13400,
+    "category": "Chronograph",
+    "featured": false,
+    "shortDescription": "Yachting countdown and regatta scale.",
+    "description": "Developed with competitive sailors: programmable countdown, high-contrast dial, and screw-down pushers that secure against spray.",
+    "image": "https://images.unsplash.com/photo-1594534475808-b18fc33b045e?auto=format&fit=crop&w=800&q=80",
+    "specs": {
+      "case": "44mm titanium",
+      "movement": "Automatic chronograph",
+      "crystal": "Sapphire",
+      "waterResistance": "200m"
+    }
+  }
+]

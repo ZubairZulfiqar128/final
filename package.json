@@ -1,0 +1,20 @@
+{
+  "name": "maison-chronos",
+  "private": true,
+  "version": "1.0.0",
+  "description": "MERN luxury watch store — monorepo (backend + frontend)",
+  "scripts": {
+    "install:all": "npm install && npm install --prefix backend && npm install --prefix frontend",
+    "dev": "concurrently -n backend,frontend -c blue,green \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "build": "npm run build --prefix frontend",
+    "lint": "npm run lint --prefix backend && npm run lint --prefix frontend",
+    "seed": "npm run seed --prefix backend",
+    "db:test": "npm run db:test --prefix backend",
+    "start": "npm run start --prefix backend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0"
+  }
+}

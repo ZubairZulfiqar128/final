@@ -1,0 +1,120 @@
+import { useEffect, useState } from 'react'
+import { BrowserRouter, Link, Navigate, Route, Routes, useLocation } from 'react-router-dom'
+import { AuthProvider, useAuth } from './context/AuthContext'
+import { CartProvider } from './context/CartContext'
+import { ProductsProvider } from './context/ProductsContext'
+import Footer from './components/Footer'
+import Modal from './components/Modal'
+import Navbar from './components/Navbar'
+import About from './pages/About'
+import Admin from './pages/Admin'
+import Cart from './pages/Cart'
+import Contact from './pages/Contact'
+import Home from './pages/Home'
+import Login from './pages/Login'
+import ProductDetails from './pages/ProductDetails'
+import Products from './pages/Products'
+import Register from './pages/Register'
+
+/**
+ * Scrolls to top on route change for smoother SPA navigation.
+ */
+function ScrollToTop() {
+  const { pathname } = useLocation()
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+  return null
+}
+
+function AppRoutes() {
+  const [quickViewProduct, setQuickViewProduct] = useState(null)
+
+  const formattedPrice = quickViewProduct
+    ? new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+        maximumFractionDigits: 0,
+      }).format(quickViewProduct.price)
+    : ''
+
+  return (
+    <>
+      <ScrollToTop />
+      <Navbar />
+      <main className="site-main">
+        <Routes>
+          <Route path="/" element={<Home onQuickView={setQuickViewProduct} />} />
+          <Route
+            path="/products"
+            element={<Products onQuickView={setQuickViewProduct} />}
+          />
+          <Route path="/products/:id" element={<ProductDetails />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </main>
+      <Footer />
+
+      <Modal
+        isOpen={!!quickViewProduct}
+        onClose={() => setQuickViewProduct(null)}
+        title={quickViewProduct?.name}
+      >
+        {quickViewProduct ? (
+          <div className="quick-view">
+            <img
+              src={quickViewProduct.image}
+              alt=""
+              className="quick-view-image"
+            />
+            <p className="quick-view-brand">{quickViewProduct.brand}</p>
+            <p className="quick-view-price">{formattedPrice}</p>
+            <p className="quick-view-desc">{quickViewProduct.shortDescription}</p>
+            <div className="modal-actions">
+              <Link
+                to={`/products/${quickViewProduct.id}`}
+                className="btn btn--primary"
+                onClick={() => setQuickViewProduct(null)}
+              >
+                Full details
+              </Link>
+              <button
+                type="button"
+                className="btn btn--outline"
+                onClick={() => setQuickViewProduct(null)}
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        ) : null}
+      </Modal>
+    </>
+  )
+}
+
+/** Remount cart when auth changes so guest/server state stays in sync. */
+function CartProviderWithKey({ children }) {
+  const { user } = useAuth()
+  return <CartProvider key={user?.id ?? 'guest'}>{children}</CartProvider>
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <AuthProvider>
+        <ProductsProvider>
+          <CartProviderWithKey>
+            <AppRoutes />
+          </CartProviderWithKey>
+        </ProductsProvider>
+      </AuthProvider>
+    </BrowserRouter>
+  )
+}
