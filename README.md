@@ -136,9 +136,9 @@ npm run dev
 
 | Service | URL |
 |---------|-----|
-| Frontend | http://localhost:5173 |
-| Backend API | http://localhost:5000 |
-| Health check | http://localhost:5000/api/health |
+| Frontend | http://fetch("http://localhost:5000/api/products"):5173 |
+| Backend API | https://maison-chronos.vercel.app/api |
+| Health check | https://maison-chronos.vercel.app/api/api/health |
 
 Vite proxies `/api` requests to the backend automatically.
 

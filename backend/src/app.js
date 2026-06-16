@@ -13,23 +13,12 @@ const app = express()
 
 const isProduction = process.env.NODE_ENV === 'production'
 
-app.use(
-  cors(
-    isProduction
-      ? {
-          origin(origin, callback) {
-            if (!origin) return callback(null, true)
-            const allowed =
-              /^https?:\/\/localhost(:\d+)?$/.test(origin) ||
-              /^https:\/\/[\w.-]+\.vercel\.app$/.test(origin) ||
-              (process.env.FRONTEND_URL && origin === process.env.FRONTEND_URL)
-            callback(null, allowed)
-          },
-          credentials: true,
-        }
-      : {}
-  )
-)
+import cors from 'cors';
+
+app.use(cors({
+  origin: 'https://merry-pothos-da9680.netlify.app',
+  credentials: true
+}));
 app.use(express.json())
 
 // Ensure MongoDB is connected before API routes (serverless-safe)

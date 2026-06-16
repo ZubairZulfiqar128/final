@@ -12,7 +12,7 @@ async function start() {
   await connectDB()
   const db = getDbStatus()
   app.listen(PORT, () => {
-    console.log(`API running on http://localhost:${PORT}`)
+    console.log(`API running on http://fetch("http://localhost:5000/api/products"):${PORT}`)
     console.log(`MongoDB: ${db.state} (${db.database ?? 'n/a'})`)
   })
 }
