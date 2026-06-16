@@ -13,7 +13,7 @@ const app = express()
 
 const isProduction = process.env.NODE_ENV === 'production'
 
-import cors from 'cors';
+
 
 app.use(cors({
   origin: 'https://merry-pothos-da9680.netlify.app',
